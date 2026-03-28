@@ -1,0 +1,70 @@
+
+#
+# simulation (NAME simulation, data assimilation via inversion)
+#
+# the data stored into this files are used to initialize:
+#   1) NAME simulation
+#   2) grids used by NAME and the procedures to process the satellite
+#      observation data
+#
+
+#--
+
+[simul]
+
+
+#
+# NAME simulation
+#
+
+# name of the NAME run
+nrun_name = None
+
+# time domain for the sequence of NAME runs
+# [ISO 8601 format: YYYYMMDD;hh:mmZ]
+start_time_nruns = None
+end_time_nruns = None
+
+# sources, definition
+no_particles = 20000/hr
+source_strength = 0.95 g/s
+hcoord = Lat-Long
+zcoord = m asl
+height_change = 4000.0
+particles_dens = 2300.00
+particle_life_span = 144
+no_times_per_day = 8
+no_heights_per_time = 6
+
+# output options
+output_time_range = 01:00
+sample_points = 6
+
+# Met data type
+mdata_type = global
+
+# NAME output format (N=netcdf or D=ascii/text)
+nameoutput_format = D
+
+#--
+
+#
+# grids
+#
+
+
+# + grid associated with the 'output' for NAME
+# number of grid points in X and Y direction
+no_gp_og_x = 1440
+no_gp_og_y = 720
+# grid spacing in X and Y direction [degrees]
+dx_og = 0.25
+dy_og = 0.25
+# location of first grid point [degrees]
+xmin_og = -179.875
+ymin_og = -89.875
+
+# + grid associated with the 'computational domain' for NAME
+# grid size in X and Y direction [degrees]
+xrange_cd = 100.0
+yrange_cd = 50.0
