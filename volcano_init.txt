@@ -1,0 +1,25 @@
+
+#
+# Volcano
+#
+
+#--
+
+[volcano]
+
+# volcano name (full)
+volcano_name = Karymsky
+
+# location, volcano name (short)
+location_v = Karym
+# location, longitude and latitude
+loc_long_v = 159.44
+loc_lat_v = 54.05
+
+# volcano specs
+base_height = 1486.0
+
+# start time of the eruption
+# [ISO 8601 format: YYYYMMDD;hh:mmZ]
+start_time_v = 20211103;07:20Z
+
